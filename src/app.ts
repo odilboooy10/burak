@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import router from "./router";
+import routerAdmin from "./routerAdmin";
 
 /** 1-Entrance **/
 const app = express();
@@ -10,11 +11,12 @@ app.use(express.json());
 
 /** 2-Sessions **/
 
-/** 1-Views **/
+/** 3-Views **/
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-/** 1-Routers **/
-app.use("/", router);  // Middleware desgin pattern
+/** 3-Routers **/
+app.use("/admin", routerAdmin); // SSR: EJS
+app.use("/", router);  // SPA: REACT
 
 export default app;
