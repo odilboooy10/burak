@@ -1,4 +1,4 @@
-console.log("TRAIN TASKS!!!");
+/*console.log("TRAIN TASKS!!!");
 
 // H-TASK
 
@@ -15,3 +15,18 @@ function getPositive(arr: number[]) {
 }
 
 console.log(getPositive([21,-48,211,-10,596]));
+
+*/
+
+/* Project Standards:
+   - Logging standards
+   - Naming standards
+       function, method, variable => CAMEL case
+       class => PASCAL
+       folder => KEBAB
+       css => SNAKE
+
+   - Error handling
+
+   
+*/
