@@ -30,3 +30,10 @@ console.log(getPositive([21,-48,211,-10,596]));
 
    
 */
+
+/*
+Traditional API
+Rest API
+GraphQL API
+...
+*/
