@@ -37,3 +37,15 @@ Rest API
 GraphQL API
 ...
 */
+
+
+// TASK I
+
+function getDigits(str: string){
+  
+   const digits = str.match(/\d/g);
+ 
+   return digits?.join("")
+ }
+ 
+ console.log(getDigits("qw1e34r56ty"));
