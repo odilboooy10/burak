@@ -41,11 +41,31 @@ GraphQL API
 
 // TASK I
 
-function getDigits(str: string){
+// function getDigits(str: string){
   
-   const digits = str.match(/\d/g);
+//    const digits = str.match(/\d/g);
  
-   return digits?.join("")
- }
+//    return digits?.join("")
+//  }
  
- console.log(getDigits("qw1e34r56ty"));
+//  console.log(getDigits("qw1e34r56ty"));
+
+
+//J-TASK
+
+function findLongestWord(str: string) {
+   const splitedStr = str.split(" ")
+   
+   let longestWord = splitedStr[0]
+
+   for(let word of splitedStr) {       
+ 
+    if(word.length >= longestWord.length) longestWord = word
+    
+   }
+
+  
+  return longestWord
+}
+
+console.log(findLongestWord('Balki u Mexanizatsiyalashtirilmaganligidandirda'));
