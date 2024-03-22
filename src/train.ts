@@ -53,22 +53,22 @@ GraphQL API
 
 //J-TASK
 
-function findLongestWord(str: string) {
-   const splitedStr = str.split(" ")
+// function findLongestWord(str: string) {
+//    const splitedStr = str.split(" ")
    
-   let longestWord = splitedStr[0]
+//    let longestWord = splitedStr[0]
 
-   for(let word of splitedStr) {       
+//    for(let word of splitedStr) {       
  
-    if(word.length >= longestWord.length) longestWord = word
+//     if(word.length >= longestWord.length) longestWord = word
     
-   }
+//    }
 
   
-  return longestWord
-}
+//   return longestWord
+// }
 
-console.log(findLongestWord('Balki u Mexanizatsiyalashtirilmaganligidandirda'));
+// console.log(findLongestWord('Balki u Mexanizatsiyalashtirilmaganligidandirda'));
 
 
 // K-TASK
@@ -77,3 +77,18 @@ console.log(findLongestWord('Balki u Mexanizatsiyalashtirilmaganligidandirda'));
 // }
 
 // console.log(countVowels('Mexanizatsiyalashtirilmaganligidandirda'));
+
+
+// L-TASK
+function reverseSentence(str: string) {
+  const splittedStr = str.split(' ')
+  let reversedStr = []
+
+  for(const word of splittedStr){
+    reversedStr.push(word.split('').reverse().join(""))
+  }
+
+  return reversedStr.join(' ')
+} 
+
+console.log(reverseSentence('Salomat!'));
