@@ -41,7 +41,7 @@ const memberSchema = new Schema({
     type: String,
   },
 
-  memberImg: {
+  memberImage: {
     type: String,
   },
 
