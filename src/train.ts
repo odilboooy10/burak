@@ -80,15 +80,28 @@ GraphQL API
 
 
 // L-TASK
-function reverseSentence(str: string) {
-  const splittedStr = str.split(' ')
-  let reversedStr = []
+// function reverseSentence(str: string) {
+//   const splittedStr = str.split(' ')
+//   let reversedStr = []
 
-  for(const word of splittedStr){
-    reversedStr.push(word.split('').reverse().join(""))
-  }
+//   for(const word of splittedStr){
+//     reversedStr.push(word.split('').reverse().join(""))
+//   }
 
-  return reversedStr.join(' ')
-} 
+//   return reversedStr.join(' ')
+// } 
 
-console.log(reverseSentence('Salomat!'));
+// console.log(reverseSentence('Salomat!'));
+
+// M-TASK
+function getSquareNumber(arr: number[]){
+   let newArr = [];
+
+   for(let i = 0; i < arr.length; i++) {
+    newArr.push({number: arr[i], square: arr[i]*arr[i]})
+   }
+
+   return newArr
+}
+
+console.log(getSquareNumber([15,27,39]));
