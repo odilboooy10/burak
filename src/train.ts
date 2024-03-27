@@ -94,14 +94,27 @@ GraphQL API
 // console.log(reverseSentence('Salomat!'));
 
 // M-TASK
-function getSquareNumber(arr: number[]){
-   let newArr = [];
+// function getSquareNumber(arr: number[]){
+//    let newArr = [];
 
-   for(let i = 0; i < arr.length; i++) {
-    newArr.push({number: arr[i], square: arr[i]*arr[i]})
-   }
+//    for(let i = 0; i < arr.length; i++) {
+//     newArr.push({number: arr[i], square: arr[i]*arr[i]})
+//    }
 
-   return newArr
+//    return newArr
+// }
+
+// console.log(getSquareNumber([15,27,39]));
+
+// N-TASK
+function palindromCheck(word: string) {
+  let backward = ''
+  let forward = word.toLowerCase()
+  for(let i = forward.length-1; i >= 0; i--){
+    backward += forward[i]
+  }
+
+  return backward === forward
 }
 
-console.log(getSquareNumber([15,27,39]));
+console.log(palindromCheck('RACECAR'));
