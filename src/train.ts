@@ -107,14 +107,26 @@ GraphQL API
 // console.log(getSquareNumber([15,27,39]));
 
 // N-TASK
-function palindromCheck(word: string) {
-  let backward = ''
-  let forward = word.toLowerCase()
-  for(let i = forward.length-1; i >= 0; i--){
-    backward += forward[i]
+// function palindromCheck(word: string) {
+//   let backward = ''
+//   let forward = word.toLowerCase()
+//   for(let i = forward.length-1; i >= 0; i--){
+//     backward += forward[i]
+//   }
+
+//   return backward === forward
+// }
+
+// console.log(palindromCheck('RACECAR'));
+
+// O-TASK
+function calculateSumOfNumbers(arr: any[]) {
+  let sum = 0;
+  for (let i = 0; i <= arr.length; i++){
+   if(typeof arr[i] === 'number') sum += arr[i]
   }
 
-  return backward === forward
+  return sum;
 }
 
-console.log(palindromCheck('RACECAR'));
+console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
