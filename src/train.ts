@@ -132,10 +132,22 @@ GraphQL API
 // console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
 
 // // P-TASK
- function objectToArray (obj:Object) {
+//  function objectToArray (obj:Object) {
   
-    return Object.entries(obj);
- }
+//     return Object.entries(obj);
+//  }
 
- console.log(objectToArray( {a: 97, b: 98}));
+//  console.log(objectToArray( {a: 97, b: 98}));
+
+// Q-TASK
+  function hasProperty(obj:any, str:string) {
+    let has = false
+    for (let key in obj) {
+        if(key === str) has = true
+        else has = false
+    }
+    return has
+}
+console.log('Got offer offer Got:');
+console.log(hasProperty({name: "BMW", model: "M3"}, "mmodel"));
  
