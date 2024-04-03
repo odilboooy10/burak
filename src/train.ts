@@ -137,5 +137,5 @@ GraphQL API
     return Object.entries(obj);
  }
 
- console.log(objectToArray( {a: 10, b: 20}));
+ console.log(objectToArray( {a: 97, b: 98}));
  
