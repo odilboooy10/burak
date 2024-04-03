@@ -120,13 +120,22 @@ GraphQL API
 // console.log(palindromCheck('RACECAR'));
 
 // O-TASK
-function calculateSumOfNumbers(arr: any[]) {
-  let sum = 0;
-  for (let i = 0; i <= arr.length; i++){
-   if(typeof arr[i] === 'number') sum += arr[i]
-  }
+// function calculateSumOfNumbers(arr: any[]) {
+//   let sum = 0;
+//   for (let i = 0; i <= arr.length; i++){
+//    if(typeof arr[i] === 'number') sum += arr[i]
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
+// console.log(calculateSumOfNumbers([456, "456", {number: 456}, true, 378]));
+
+// // P-TASK
+ function objectToArray (obj:Object) {
+  
+    return Object.entries(obj);
+ }
+
+ console.log(objectToArray( {a: 10, b: 20}));
+ 
