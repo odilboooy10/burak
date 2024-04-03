@@ -140,14 +140,30 @@ GraphQL API
 //  console.log(objectToArray( {a: 97, b: 98}));
 
 // Q-TASK
-  function hasProperty(obj:any, str:string) {
-    let has = false
-    for (let key in obj) {
-        if(key === str) has = true
-        else has = false
+//   function hasProperty(obj:any, str:string) {
+//     let has = false
+//     for (let key in obj) {
+//         if(key === str) has = true
+//         else has = false
+//     }
+//     return has
+// }
+// console.log('Got offer offer Got:');
+// console.log(hasProperty({name: "BMW", model: "M3"}, "mmodel"));
+
+// R-TASK
+
+function calculate(str:string) {
+   
+    let plus = str.split('+');
+    
+    let sum = 0;
+    for (let i of plus) {
+        sum += parseInt(i);
     }
-    return has
+    
+    return sum;
 }
-console.log('Got offer offer Got:');
-console.log(hasProperty({name: "BMW", model: "M3"}, "mmodel"));
+console.log(calculate("1+3"));
+
  
