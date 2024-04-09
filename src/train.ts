@@ -201,18 +201,33 @@ GraphQL API
 // }
 // console.log('************', missingNumbers([2,31,25,17,23,11]));
 
-//TASK-T
+// TASK-T
 
-function mergeSortedArrays(arr1: number[], arr2: number[]) {
-  let newArr = arr1
-  for( let i = 0; i < arr2.length; i++) {
-    newArr.push(arr2[i])
-  }
+// function mergeSortedArrays(arr1: number[], arr2: number[]) {
+//   let newArr = arr1
+//   for( let i = 0; i < arr2.length; i++) {
+//     newArr.push(arr2[i])
+//   }
 
-    return newArr
+//     return newArr
+// }
+
+// console.log(mergeSortedArrays([1,2,3],[4,5,6,7,8,9]));
+
+
+// TASK-U
+
+function countOddNumbers(n: number): number {
+   let count = 0;
+   for (let i = 1; i <= n; i += 2) {
+      count++;
+   }
+   return count;
 }
 
-console.log(mergeSortedArrays([1,2,3],[4,5,6,7,8,9]));
+console.log(countOddNumbers(3)); 
+console.log(countOddNumbers(11));
+
 
 
 
