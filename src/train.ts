@@ -168,38 +168,52 @@ GraphQL API
 
 // TASK S
 
-function missingNumber(arr: number[]) {
+// function missingNumber(arr: number[]) {
   
-  let missedNumbers = []
-  let sortedArr = arr.sort((a, b)=> a - b)
+//   let missedNumbers = []
+//   let sortedArr = arr.sort((a, b)=> a - b)
 
-   for(let i = 0; i <= sortedArr.length-2; i++) {
+//    for(let i = 0; i <= sortedArr.length-2; i++) {
      
-    if(sortedArr[i] - sortedArr[i+1] !== -1) {
-      missedNumbers.push(sortedArr[i]+1)
-    } 
+//     if(sortedArr[i] - sortedArr[i+1] !== -1) {
+//       missedNumbers.push(sortedArr[i]+1)
+//     } 
 
-   }
+//    }
 
-   return missedNumbers.slice().join(',')
-}
+//    return missedNumbers.slice().join(',')
+// }
 
-console.log('************', missingNumber([2,31,25,17,23,11]));
+// console.log('************', missingNumber([2,31,25,17,23,11]));
 
-function missingNumbers(arr: number[]) {
-  const max = Math.max(...arr); 
-  const min = Math.min(...arr); 
-  const missing = [];
+// function missingNumbers(arr: number[]) {
+//   const max = Math.max(...arr); 
+//   const min = Math.min(...arr); 
+//   const missing = [];
 
-  for (let i = min; i <= max; i++) {
-    if (!arr.includes(i)) {
+//   for (let i = min; i <= max; i++) {
+//     if (!arr.includes(i)) {
       
-      missing.push(i);
-    }
+//       missing.push(i);
+//     }
+//   }
+//   return missing.slice().join(',');
+// }
+// console.log('************', missingNumbers([2,31,25,17,23,11]));
+
+//TASK-T
+
+function mergeSortedArrays(arr1: number[], arr2: number[]) {
+  let newArr = arr1
+  for( let i = 0; i < arr2.length; i++) {
+    newArr.push(arr2[i])
   }
-  return missing.slice().join(',');
+
+    return newArr
 }
-console.log('************', missingNumbers([2,31,25,17,23,11]));
+
+console.log(mergeSortedArrays([1,2,3],[4,5,6,7,8,9]));
+
 
 
  
