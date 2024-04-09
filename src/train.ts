@@ -217,16 +217,34 @@ GraphQL API
 
 // TASK-U
 
-function countOddNumbers(n: number): number {
-   let count = 0;
-   for (let i = 1; i <= n; i += 2) {
-      count++;
-   }
-   return count;
+// function countOddNumbers(n: number): number {
+//    let count = 0;
+//    for (let i = 1; i <= n; i += 2) {
+//       count++;
+//    }
+//    return count;
+// }
+
+// console.log(countOddNumbers(3)); 
+// console.log(countOddNumbers(11));
+
+// TASK - V
+
+function countChars(s: string): { [key: string]: number } {
+  const charCount: { [key: string]: number } = {};
+  for (const char of s) {
+    if (char in charCount) {
+      charCount[char]++;
+    } else {
+      charCount[char] = 1;
+    }
+  }
+  return charCount;
 }
 
-console.log(countOddNumbers(3)); 
-console.log(countOddNumbers(11));
+const charCount = countChars("Mexanizatsiyalashtirilmaganligidandirda");
+console.log("Mexanizatsiyalashtirilmaganligidandirda:" ,charCount); 
+
 
 
 
