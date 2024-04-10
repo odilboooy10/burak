@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-/** 3-Routers **/
+/** 4-Routers **/
 app.use("/admin", routerAdmin); // SSR: EJS
 app.use("/", router);  // SPA: REACT
 
