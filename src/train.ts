@@ -248,21 +248,53 @@ GraphQL API
 
 // Task - W
 
-function chunkArray(arr: number[], chunkSize: number): number[][] {
-  const chunkedArray: number[][] = [];
+// function chunkArray(arr: number[], chunkSize: number): number[][] {
+//   const chunkedArray: number[][] = [];
 
-  for(let i = 0; i < arr.length; i += chunkSize) {
-     const chunk = arr.slice(i, i + chunkSize);
-     chunkedArray.push(chunk);
-  }
+//   for(let i = 0; i < arr.length; i += chunkSize) {
+//      const chunk = arr.slice(i, i + chunkSize);
+//      chunkedArray.push(chunk);
+//   }
 
-  return chunkedArray
-}
+//   return chunkedArray
+// }
 
-console.log("test:", chunkArray([1,2,3,4,5,6,7,8,9,10,11,12], 4));
+// console.log("test:", chunkArray([1,2,3,4,5,6,7,8,9,10,11,12], 4));
 
 
+// Task - X
 
+function countOccurrences(obj: any, key: string): number {
+   let count = 0;
+ 
+   function countKeys(obj: any): void {
+ 
+       if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
+           return;
+       }
+ 
+ 
+       for (const prop in obj) {
+ 
+           if (obj.hasOwnProperty(prop)) {
+ 
+               if (prop === key) {
+                   count++;
+               }
+ 
+               if (typeof obj[prop] === 'object') {
+                   countKeys(obj[prop]);
+               }
+           }
+       }
+   }
+   countKeys(obj);
+ 
+   return count;
+ }
+ 
+ const obj = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } };
+ console.log(countOccurrences(obj, 'model'));
 
 
  
