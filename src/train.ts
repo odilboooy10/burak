@@ -264,37 +264,52 @@ GraphQL API
 
 // Task - X
 
-function countOccurrences(obj: any, key: string): number {
-   let count = 0;
+// function countOccurrences(obj: any, key: string): number {
+//    let count = 0;
  
-   function countKeys(obj: any): void {
+//    function countKeys(obj: any): void {
  
-       if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
-           return;
-       }
+//        if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
+//            return;
+//        }
  
  
-       for (const prop in obj) {
+//        for (const prop in obj) {
  
-           if (obj.hasOwnProperty(prop)) {
+//            if (obj.hasOwnProperty(prop)) {
  
-               if (prop === key) {
-                   count++;
-               }
+//                if (prop === key) {
+//                    count++;
+//                }
  
-               if (typeof obj[prop] === 'object') {
-                   countKeys(obj[prop]);
-               }
-           }
-       }
-   }
-   countKeys(obj);
+//                if (typeof obj[prop] === 'object') {
+//                    countKeys(obj[prop]);
+//                }
+//            }
+//        }
+//    }
+//    countKeys(obj);
  
-   return count;
- }
+//    return count;
+//  }
  
- const obj = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } };
- console.log(countOccurrences(obj, 'model'));
+//  const obj = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } };
+//  console.log(countOccurrences(obj, 'model'));
 
 
- 
+// Task - Y
+
+function findIntersection(array1: number[], array2: number[]) {
+    const intersection = [];
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if(array1[i] === array2[j]) {
+                intersection.push(array1[i])
+            }
+        }
+    }
+    return intersection;
+}
+
+const result = findIntersection([1,2,3], [3,2,0])
+console.log(result)
