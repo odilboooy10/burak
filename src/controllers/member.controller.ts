@@ -6,8 +6,8 @@ import Errors, { HttpCode, Message } from "../libs/Errors";
 import AuthService from "../models/Auth.service";
 import { AUTH_TIMER } from "../libs/config";
 
-const memberService = new MemberService
-const authService = new AuthService
+const memberService = new MemberService();
+const authService = new AuthService();
 
 const memberController: T = {};
 
