@@ -19,16 +19,20 @@ productController.getProducts = async (req: Request, res: Response) => {
             page: Number(page),
             limit: Number(limit),
         };
-        if(productCollection) 
-           inquiry.productCollection = productCollection as ProductCollection;
+        if (productCollection) {
+            inquiry.productCollection = productCollection as ProductCollection;
+        }
         if(search) inquiry.search = String(search);
-        res.status(HttpCode.OK).json({ result: "DONE!" });
+
+        const result = await productService.getProducts(inquiry);
+
+        res.status(HttpCode.OK).json(result);
      }  catch (err) {
         console.log("Error, getProducts:", err);
-        if(err instanceof Errors) res.status(err.code).json(err);
+        if (err instanceof Errors) res.status(err.code).json(err);
         else res.status(Errors.standard.code).json(Errors.standard);
     }
-}
+};
 
 /** SSR */
 
