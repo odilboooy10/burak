@@ -299,17 +299,34 @@ GraphQL API
 
 // Task - Y
 
-function findIntersection(array1: number[], array2: number[]) {
-    const intersection = [];
-    for (let i = 0; i < array1.length; i++) {
-        for (let j = 0; j < array2.length; j++) {
-            if(array1[i] === array2[j]) {
-                intersection.push(array1[i])
-            }
+// function findIntersection(array1: number[], array2: number[]) {
+//     const intersection = [];
+//     for (let i = 0; i < array1.length; i++) {
+//         for (let j = 0; j < array2.length; j++) {
+//             if(array1[i] === array2[j]) {
+//                 intersection.push(array1[i])
+//             }
+//         }
+//     }
+//     return intersection;
+// }
+
+// const result = findIntersection([1,2,3], [3,2,0])
+// console.log(result)
+
+// Task - Z
+
+function sumEvens(array: number[]) {
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (array[i] % 2 === 0) {
+            sum += array[i]
         }
     }
-    return intersection;
+    return sum
 }
 
-const result = findIntersection([1,2,3], [3,2,0])
+const result = sumEvens([1, 2, 3, 4, 5])
 console.log(result)
