@@ -316,17 +316,35 @@ GraphQL API
 
 // Task - Z
 
-function sumEvens(array: number[]) {
-    let sum = 0;
+// function sumEvens(array: number[]) {
+//     let sum = 0;
 
-    for (let i = 0; i < array.length; i++) {
-        const element = array[i];
-        if (array[i] % 2 === 0) {
-            sum += array[i]
+//     for (let i = 0; i < array.length; i++) {
+//         const element = array[i];
+//         if (array[i] % 2 === 0) {
+//             sum += array[i]
+//         }
+//     }
+//     return sum
+// }
+
+// const result = sumEvens([1, 2, 3, 4, 5])
+// console.log(result)
+
+
+// Task - ZA
+
+function sortByAge(arr: any[]): any[] {
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr.length; j++) {
+        if (arr[i].age < arr[j].age) {
+          let temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
         }
+      }
     }
-    return sum
-}
-
-const result = sumEvens([1, 2, 3, 4, 5])
-console.log(result)
+    return arr;
+  }
+  
+  console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }]));
