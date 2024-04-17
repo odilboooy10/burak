@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Router } from "express";
 const router = express.Router();
 import memberController from "./controllers/member.controller";
 import uploader from "./libs/utils/uploader"
@@ -45,6 +45,11 @@ router.get(
   "/order/all",
   memberController.verifyAuth,
   orderController.getMyOrders
+);
+router.post(
+  "/order/update", 
+memberController.verifyAuth, 
+orderController.updateOrder
 );
 
 
