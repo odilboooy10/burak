@@ -334,17 +334,26 @@ GraphQL API
 
 // Task - ZA
 
-function sortByAge(arr: any[]): any[] {
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = 0; j < arr.length; j++) {
-        if (arr[i].age < arr[j].age) {
-          let temp = arr[i];
-          arr[i] = arr[j];
-          arr[j] = temp;
-        }
-      }
-    }
-    return arr;
-  }
+// function sortByAge(arr: any[]): any[] {
+//     for (let i = 0; i < arr.length; i++) {
+//       for (let j = 0; j < arr.length; j++) {
+//         if (arr[i].age < arr[j].age) {
+//           let temp = arr[i];
+//           arr[i] = arr[j];
+//           arr[j] = temp;
+//         }
+//       }
+//     }
+//     return arr;
+//   }
   
-  console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }]));
+//   console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }]));
+
+
+// Task - ZB
+
+function randomBetween(num: number, num1: number) {
+  return Math.floor(Math.random() * ( num1 - num )) + num;
+}
+  console.log(randomBetween( 30, 50 )
+);
