@@ -352,8 +352,20 @@ GraphQL API
 
 // Task - ZB
 
-function randomBetween(num: number, num1: number) {
-  return Math.floor(Math.random() * ( num1 - num )) + num;
+// function randomBetween(num: number, num1: number) {
+//   return Math.floor(Math.random() * ( num1 - num )) + num;
+// }
+//   console.log(randomBetween( 30, 50 )
+// );
+
+
+// Task - ZC
+
+
+function celsiusToFahrenheit(degree: number) {
+   return Math.floor((degree * 1.8) + 32)
 }
-  console.log(randomBetween( 30, 50 )
-);
+
+const result = celsiusToFahrenheit(20)
+console.log(result)
+
