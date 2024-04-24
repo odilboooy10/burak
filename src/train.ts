@@ -362,10 +362,22 @@ GraphQL API
 // Task - ZC
 
 
-function celsiusToFahrenheit(degree: number) {
-   return Math.floor((degree * 1.8) + 32)
-}
+// function celsiusToFahrenheit(degree: number) {
+//    return Math.floor((degree * 1.8) + 32)
+// }
 
-const result = celsiusToFahrenheit(20)
-console.log(result)
+// const result = celsiusToFahrenheit(20)
+// console.log(result)
+
+// Task - ZD
+function changeNumberInArray(
+   index: number,
+   arr: number[],
+   newNumber: number
+ ): number[] {
+   if (index >= 0 && index < arr.length) {
+     arr[index] = newNumber;
+   }
+   return arr;
+ }
 
