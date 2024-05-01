@@ -370,14 +370,45 @@ GraphQL API
 // console.log(result)
 
 // Task - ZD
-function changeNumberInArray(
-   index: number,
-   arr: number[],
-   newNumber: number
- ): number[] {
-   if (index >= 0 && index < arr.length) {
-     arr[index] = newNumber;
-   }
-   return arr;
- }
 
+// function changeNumberInArray(
+//   index: number,
+//   array: number[],
+//   number: number
+// ): number[] {
+//   if (index >= 0 && index < array.length) {
+//     const mutableArray = [...array];
+//     mutableArray[index] = number;
+//     return mutableArray;
+//   } else {
+//     return array;
+//   }
+
+// };
+
+// TASK - ZE
+function removeDuplicate(str: string) {
+    let temp = ''
+    for (let i = 0; i < str.length; i++) {
+        if (temp.indexOf(str[i]) < 0) {
+            temp += str[i];
+        }
+    }
+    return temp;
+}
+const result = removeDuplicate('MIIT')  //output should be: string
+console.log(result)
+// Task - ZF
+// function capitalizeWords(input: string): string {
+//   const words: string[] = input.split(" ");
+//   const capitalizedWords: string[] = [];
+//   for (const word of words) {
+//     if (word.length <= 2) {
+//       capitalizedWords.push(word);
+//     } else {
+//       capitalizedWords.push(word.charAt(0).toUpperCase() + word.slice(1));
+//     }
+//   }
+//   return capitalizedWords.join(" ");
+// }
+// console.log(capitalizeWords("name should be a string"));
