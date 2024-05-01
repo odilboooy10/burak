@@ -387,17 +387,17 @@ GraphQL API
 // };
 
 // TASK - ZE
-function removeDuplicate(str: string) {
-    let temp = ''
-    for (let i = 0; i < str.length; i++) {
-        if (temp.indexOf(str[i]) < 0) {
-            temp += str[i];
-        }
-    }
-    return temp;
-}
-const result = removeDuplicate('MIIT')  //output should be: string
-console.log(result)
+// function removeDuplicate(str: string) {
+//     let temp = ''
+//     for (let i = 0; i < str.length; i++) {
+//         if (temp.indexOf(str[i]) < 0) {
+//             temp += str[i];
+//         }
+//     }
+//     return temp;
+// }
+// const result = removeDuplicate('MIIT')  //output should be: string
+// console.log(result)
 // Task - ZF
 // function capitalizeWords(input: string): string {
 //   const words: string[] = input.split(" ");
@@ -411,4 +411,19 @@ console.log(result)
 //   }
 //   return capitalizedWords.join(" ");
 // }
-// console.log(capitalizeWords("name should be a string"));
+// console.log(capitalizeWords("i am full stack developer"));
+
+// TASK - ZG
+function capitalizeWords(input: string): string {
+  const words: string[] = input.split(" ");
+  const capitalizedWords: string[] = [];
+  for (const word of words) {
+    if (word.length <= 2) {
+      capitalizedWords.push(word);
+    } else {
+      capitalizedWords.push(word.charAt(0) + word.slice(1));
+    }
+  }
+  return capitalizedWords.join("_");
+}
+console.log(capitalizeWords("i am full stack developer"));
