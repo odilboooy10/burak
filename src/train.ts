@@ -431,24 +431,22 @@ GraphQL API
 
 // TASK -ZH
 
-function findDisappearedNumbers(nums: number[]): number[] {
-  const n: number = nums.length;
+function findDisappearedNumbers(arr: number[]) {
+    const newArr: number[] = [];
+    const sortedArr = arr.sort((a, b) => a - b);
   
-  for (let i: number = 0; i < n; i++) {
-      const newIndex: number = Math.abs(nums[i]) - 1;
-      if (nums[newIndex] > 0) {
-          nums[newIndex] *= -1; 
+    const min = sortedArr[0];
+    const max = sortedArr[sortedArr.length - 1];
+  
+    for (let i = min + 1; i < max; i++) {
+      if (!sortedArr.includes(i)) {
+        newArr.push(i);
       }
+    }
+  
+    return newArr;
   }
   
-  const result: number[] = [];
-  for (let i: number = 0; i < n; i++) {
-      if (nums[i] > 0) { 
-          result.push(i + 1);
-      }
-  }
-  
-  return result;
-}
-
-console.log(findDisappearedNumbers([1, 3, 4, 7]));
+  const arr = [1, 3, 7, 4];
+  const answer = findDisappearedNumbers(arr);
+  console.log(answer);
