@@ -414,16 +414,41 @@ GraphQL API
 // console.log(capitalizeWords("i am full stack developer"));
 
 // TASK - ZG
-function capitalizeWords(input: string): string {
-  const words: string[] = input.split(" ");
-  const capitalizedWords: string[] = [];
-  for (const word of words) {
-    if (word.length <= 2) {
-      capitalizedWords.push(word);
-    } else {
-      capitalizedWords.push(word.charAt(0) + word.slice(1));
-    }
+// function capitalizeWords(input: string): string {
+//   const words: string[] = input.split(" ");
+//   const capitalizedWords: string[] = [];
+//   for (const word of words) {
+//     if (word.length <= 2) {
+//       capitalizedWords.push(word);
+//     } else {
+//       capitalizedWords.push(word.charAt(0) + word.slice(1));
+//     }
+//   }
+//   return capitalizedWords.join("_");
+// }
+// console.log(capitalizeWords("i am full stack developer"));
+
+
+// TASK -ZH
+
+function findDisappearedNumbers(nums: number[]): number[] {
+  const n: number = nums.length;
+  
+  for (let i: number = 0; i < n; i++) {
+      const newIndex: number = Math.abs(nums[i]) - 1;
+      if (nums[newIndex] > 0) {
+          nums[newIndex] *= -1; 
+      }
   }
-  return capitalizedWords.join("_");
+  
+  const result: number[] = [];
+  for (let i: number = 0; i < n; i++) {
+      if (nums[i] > 0) { 
+          result.push(i + 1);
+      }
+  }
+  
+  return result;
 }
-console.log(capitalizeWords("i am full stack developer"));
+
+console.log(findDisappearedNumbers([1, 3, 4, 7]));
