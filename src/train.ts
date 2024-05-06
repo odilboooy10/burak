@@ -431,22 +431,34 @@ GraphQL API
 
 // TASK -ZH
 
-function findDisappearedNumbers(arr: number[]) {
-    const newArr: number[] = [];
-    const sortedArr = arr.sort((a, b) => a - b);
+// function findDisappearedNumbers(arr: number[]) {
+//     const newArr: number[] = [];
+//     const sortedArr = arr.sort((a, b) => a - b);
   
-    const min = sortedArr[0];
-    const max = sortedArr[sortedArr.length - 1];
+//     const min = sortedArr[0];
+//     const max = sortedArr[sortedArr.length - 1];
   
-    for (let i = min + 1; i < max; i++) {
-      if (!sortedArr.includes(i)) {
-        newArr.push(i);
-      }
-    }
+//     for (let i = min + 1; i < max; i++) {
+//       if (!sortedArr.includes(i)) {
+//         newArr.push(i);
+//       }
+//     }
   
-    return newArr;
-  }
+//     return newArr;
+//   }
   
-  const arr = [1, 3, 7, 4];
-  const answer = findDisappearedNumbers(arr);
-  console.log(answer);
+//   const arr = [1, 3, 7, 4];
+//   const answer = findDisappearedNumbers(arr);
+//   console.log(answer);
+
+// TASK - ZI
+
+function delayHelloWorld(str: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(str);
+    }, 3000);
+  });
+}
+
+delayHelloWorld("Hello World").then((data) => console.log(data));
