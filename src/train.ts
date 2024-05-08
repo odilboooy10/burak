@@ -453,12 +453,27 @@ GraphQL API
 
 // TASK - ZI
 
-function delayHelloWorld(str: string): Promise<string> {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(str);
-    }, 3000);
-  });
-}
+// function delayHelloWorld(str: string): Promise<string> {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(str);
+//     }, 3000);
+//   });
+// }
 
-delayHelloWorld("Hello World").then((data) => console.log(data));
+// delayHelloWorld("Hello World").then((data) => console.log(data));
+
+// TASK - ZJ
+
+function reduceNestedArray(arr: (number | any)[]): number {
+  return arr.reduce((acc, val) => {
+      if (Array.isArray(val)) {
+          return acc + reduceNestedArray(val);
+      } else if (typeof val === 'number') {
+          return acc + val;
+      } else {
+          return acc;
+      }
+  }, 0);
+}
+console.log(reduceNestedArray([1, [1, 2, [5]]]));
