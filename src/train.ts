@@ -465,15 +465,30 @@ GraphQL API
 
 // TASK - ZJ
 
-function reduceNestedArray(arr: (number | any)[]): number {
-  return arr.reduce((acc, val) => {
-      if (Array.isArray(val)) {
-          return acc + reduceNestedArray(val);
-      } else if (typeof val === 'number') {
-          return acc + val;
-      } else {
-          return acc;
-      }
-  }, 0);
+// function reduceNestedArray(arr: (number | any)[]): number {
+//   return arr.reduce((acc, val) => {
+//       if (Array.isArray(val)) {
+//           return acc + reduceNestedArray(val);
+//       } else if (typeof val === 'number') {
+//           return acc + val;
+//       } else {
+//           return acc;
+//       }
+//   }, 0);
+// }
+// console.log(reduceNestedArray([1, [1, 2, [5]]]));
+
+// ZK-TASK:
+
+function printNumbers() {
+	const interval = setInterval(() => {
+		for (let i = 1; i <= 5; i++) {
+			console.log(i);
+		}
+	}, 1000);
+	setTimeout(() => {
+		clearTimeout(interval);
+	}, 5000);
 }
-console.log(reduceNestedArray([1, [1, 2, [5]]]));
+
+printNumbers();
