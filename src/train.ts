@@ -38,38 +38,34 @@ GraphQL API
 ...
 */
 
-
 // TASK I
 
 // function getDigits(str: string){
-  
+
 //    const digits = str.match(/\d/g);
- 
+
 //    return digits?.join("")
 //  }
- 
-//  console.log(getDigits("qw1e34r56ty"));
 
+//  console.log(getDigits("qw1e34r56ty"));
 
 //J-TASK
 
 // function findLongestWord(str: string) {
 //    const splitedStr = str.split(" ")
-   
+
 //    let longestWord = splitedStr[0]
 
-//    for(let word of splitedStr) {       
- 
+//    for(let word of splitedStr) {
+
 //     if(word.length >= longestWord.length) longestWord = word
-    
+
 //    }
 
-  
 //   return longestWord
 // }
 
 // console.log(findLongestWord('Balki u Mexanizatsiyalashtirilmaganligidandirda'));
-
 
 // K-TASK
 // function countVowels(str: string) {
@@ -77,7 +73,6 @@ GraphQL API
 // }
 
 // console.log(countVowels('Mexanizatsiyalashtirilmaganligidandirda'));
-
 
 // L-TASK
 // function reverseSentence(str: string) {
@@ -89,7 +84,7 @@ GraphQL API
 //   }
 
 //   return reversedStr.join(' ')
-// } 
+// }
 
 // console.log(reverseSentence('Salomat!'));
 
@@ -133,7 +128,7 @@ GraphQL API
 
 // // P-TASK
 //  function objectToArray (obj:Object) {
-  
+
 //     return Object.entries(obj);
 //  }
 
@@ -154,14 +149,14 @@ GraphQL API
 // R-TASK
 
 // function calculate(str:string) {
-   
+
 //     let plus = str.split('+');
-    
+
 //     let sum = 0;
 //     for (let i of plus) {
 //         sum += parseInt(i);
 //     }
-    
+
 //     return sum;
 // }
 // console.log(calculate("1+3"));
@@ -169,15 +164,15 @@ GraphQL API
 // TASK S
 
 // function missingNumber(arr: number[]) {
-  
+
 //   let missedNumbers = []
 //   let sortedArr = arr.sort((a, b)=> a - b)
 
 //    for(let i = 0; i <= sortedArr.length-2; i++) {
-     
+
 //     if(sortedArr[i] - sortedArr[i+1] !== -1) {
 //       missedNumbers.push(sortedArr[i]+1)
-//     } 
+//     }
 
 //    }
 
@@ -187,13 +182,13 @@ GraphQL API
 // console.log('************', missingNumber([2,31,25,17,23,11]));
 
 // function missingNumbers(arr: number[]) {
-//   const max = Math.max(...arr); 
-//   const min = Math.min(...arr); 
+//   const max = Math.max(...arr);
+//   const min = Math.min(...arr);
 //   const missing = [];
 
 //   for (let i = min; i <= max; i++) {
 //     if (!arr.includes(i)) {
-      
+
 //       missing.push(i);
 //     }
 //   }
@@ -214,7 +209,6 @@ GraphQL API
 
 // console.log(mergeSortedArrays([1,2,3],[4,5,6,7,8,9]));
 
-
 // TASK-U
 
 // function countOddNumbers(n: number): number {
@@ -225,7 +219,7 @@ GraphQL API
 //    return count;
 // }
 
-// console.log(countOddNumbers(3)); 
+// console.log(countOddNumbers(3));
 // console.log(countOddNumbers(11));
 
 // TASK - V
@@ -243,8 +237,7 @@ GraphQL API
 // }
 
 // const charCount = countChars("Mexanizatsiyalashtirilmaganligidandirda");
-// console.log("Mexanizatsiyalashtirilmaganligidandirda:" ,charCount); 
-
+// console.log("Mexanizatsiyalashtirilmaganligidandirda:" ,charCount);
 
 // Task - W
 
@@ -261,27 +254,25 @@ GraphQL API
 
 // console.log("test:", chunkArray([1,2,3,4,5,6,7,8,9,10,11,12], 4));
 
-
 // Task - X
 
 // function countOccurrences(obj: any, key: string): number {
 //    let count = 0;
- 
+
 //    function countKeys(obj: any): void {
- 
+
 //        if (obj === null || typeof obj !== 'object' || Array.isArray(obj)) {
 //            return;
 //        }
- 
- 
+
 //        for (const prop in obj) {
- 
+
 //            if (obj.hasOwnProperty(prop)) {
- 
+
 //                if (prop === key) {
 //                    count++;
 //                }
- 
+
 //                if (typeof obj[prop] === 'object') {
 //                    countKeys(obj[prop]);
 //                }
@@ -289,13 +280,12 @@ GraphQL API
 //        }
 //    }
 //    countKeys(obj);
- 
+
 //    return count;
 //  }
- 
+
 //  const obj = { model: 'Bugatti', steer: { model: 'HANKOOK', size: 30 } };
 //  console.log(countOccurrences(obj, 'model'));
-
 
 // Task - Y
 
@@ -331,7 +321,6 @@ GraphQL API
 // const result = sumEvens([1, 2, 3, 4, 5])
 // console.log(result)
 
-
 // Task - ZA
 
 // function sortByAge(arr: any[]): any[] {
@@ -346,9 +335,8 @@ GraphQL API
 //     }
 //     return arr;
 //   }
-  
-//   console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }]));
 
+//   console.log(sortByAge([{ age: 23 }, { age: 21 }, { age: 13 }]));
 
 // Task - ZB
 
@@ -358,9 +346,7 @@ GraphQL API
 //   console.log(randomBetween( 30, 50 )
 // );
 
-
 // Task - ZC
-
 
 // function celsiusToFahrenheit(degree: number) {
 //    return Math.floor((degree * 1.8) + 32)
@@ -428,25 +414,24 @@ GraphQL API
 // }
 // console.log(capitalizeWords("i am full stack developer"));
 
-
 // TASK -ZH
 
 // function findDisappearedNumbers(arr: number[]) {
 //     const newArr: number[] = [];
 //     const sortedArr = arr.sort((a, b) => a - b);
-  
+
 //     const min = sortedArr[0];
 //     const max = sortedArr[sortedArr.length - 1];
-  
+
 //     for (let i = min + 1; i < max; i++) {
 //       if (!sortedArr.includes(i)) {
 //         newArr.push(i);
 //       }
 //     }
-  
+
 //     return newArr;
 //   }
-  
+
 //   const arr = [1, 3, 7, 4];
 //   const answer = findDisappearedNumbers(arr);
 //   console.log(answer);
@@ -480,15 +465,27 @@ GraphQL API
 
 // ZK-TASK:
 
-function printNumbers() {
-	const interval = setInterval(() => {
-		for (let i = 1; i <= 5; i++) {
-			console.log(i);
-		}
-	}, 1000);
-	setTimeout(() => {
-		clearTimeout(interval);
-	}, 5000);
+// function printNumbers() {
+// 	const interval = setInterval(() => {
+// 		for (let i = 1; i <= 5; i++) {
+// 			console.log(i);
+// 		}
+// 	}, 1000);
+// 	setTimeout(() => {
+// 		clearTimeout(interval);
+// 	}, 5000);
+// }
+
+// printNumbers();
+
+// ZL-TASK:
+function stringToKebab(str: string) {
+  let new_str = str.split(" ");
+  let toLower = new_str.map(function (letter) {
+    return letter.charAt(0).toLocaleLowerCase() + letter.slice(1);
+  });
+  return toLower.join("-");
 }
 
-printNumbers();
+const result = stringToKebab("I Love Kebab");
+console.log("result:", result);
