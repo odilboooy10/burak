@@ -479,13 +479,29 @@ GraphQL API
 // printNumbers();
 
 // ZL-TASK:
-function stringToKebab(str: string) {
-  let new_str = str.split(" ");
-  let toLower = new_str.map(function (letter) {
-    return letter.charAt(0).toLocaleLowerCase() + letter.slice(1);
-  });
-  return toLower.join("-");
+// function stringToKebab(str: string) {
+//   let new_str = str.split(" ");
+//   let toLower = new_str.map(function (letter) {
+//     return letter.charAt(0).toLocaleLowerCase() + letter.slice(1);
+//   });
+//   return toLower.join("-");
+// }
+
+// const result = stringToKebab("I Love Kebab");
+// console.log("result:", result);
+
+// Task - ZM
+
+function reverseInteger(n: number): number {
+  let str_n = n.toString();
+
+  let reversedStr: string;
+  if (str_n[0] === "-") {
+    reversedStr = "-" + str_n.slice(1).split("").reverse().join("");
+  } else {
+    reversedStr = str_n.split("").reverse().join("");
+  }
+  return parseInt(reversedStr, 10);
 }
 
-const result = stringToKebab("I Love Kebab");
-console.log("result:", result);
+console.log(reverseInteger(123456789));
