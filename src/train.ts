@@ -492,16 +492,37 @@ GraphQL API
 
 // Task - ZM
 
-function reverseInteger(n: number): number {
-  let str_n = n.toString();
+// function reverseInteger(n: number): number {
+//   let str_n = n.toString();
 
-  let reversedStr: string;
-  if (str_n[0] === "-") {
-    reversedStr = "-" + str_n.slice(1).split("").reverse().join("");
-  } else {
-    reversedStr = str_n.split("").reverse().join("");
+//   let reversedStr: string;
+//   if (str_n[0] === "-") {
+//     reversedStr = "-" + str_n.slice(1).split("").reverse().join("");
+//   } else {
+//     reversedStr = str_n.split("").reverse().join("");
+//   }
+//   return parseInt(reversedStr, 10);
+// }
+
+// console.log(reverseInteger(123456789));
+
+// Task - ZN
+
+function rotateArray(arr: number[], index: number): number[] {
+  const rotated: number[] = [];
+  const len: number = arr.length;
+  index = (index - 1) % len;
+
+  for (let i = len - index; i < len; i++) {
+    rotated.push(arr[i]);
   }
-  return parseInt(reversedStr, 10);
+
+  for (let i = 0; i < len - index; i++) {
+    rotated.push(arr[i]);
+  }
+
+  return rotated;
 }
 
-console.log(reverseInteger(123456789));
+const result: number[] = rotateArray([1, 2, 3, 4, 5, 6], 3);
+console.log(result);
