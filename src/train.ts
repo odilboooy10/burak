@@ -526,3 +526,58 @@ GraphQL API
 
 // const result: number[] = rotateArray([1, 2, 3, 4, 5, 6], 3);
 // console.log(result);
+
+// Task ZO
+
+// function areParenthesesBalanced(input: string): boolean {
+//   if (!input.includes('(') && !input.includes(')')) {
+//       return false;
+//   }
+//   let balance = 0;
+//   for (let char of input) {
+//       if (char === '(') {
+//           balance++;
+//       } else if (char === ')') {
+//           balance--;
+//       }
+//       if (balance < 0) {
+//           return false;
+//       }
+//   }
+//   return balance === 0;
+// }
+
+// console.log(areParenthesesBalanced("string()ichida(qavslar)soni()balansda")); // true
+// console.log(areParenthesesBalanced("string)ichida(qavslar(")); // false
+// console.log(areParenthesesBalanced("string(ichida(qavslar)soni()balansda(")); // false
+// console.log(areParenthesesBalanced("((()))")); // true
+// console.log(areParenthesesBalanced("(()))(")); // false
+// console.log(areParenthesesBalanced("string")); // false
+
+// Task ZP
+
+function majorityElement(nums: number[]): number {
+  const count: { [key: number]: number } = {};
+
+  for (const num of nums) {
+    if (count[num] !== undefined) {
+      count[num]++;
+    } else {
+      count[num] = 1;
+    }
+  }
+
+  let majority = nums[0];
+  let maxCount = 0;
+
+  for (const num in count) {
+    if (count[num] > maxCount) {
+      maxCount = count[num];
+      majority = Number(num);
+    }
+  }
+
+  return majority;
+}
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
