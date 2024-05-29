@@ -584,20 +584,45 @@ GraphQL API
 
 // TASK ZQ
 
-function findDuplicates(nums: number[]): number[] {
-  const duplicates: number[] = [];
-  const seen: Set<number> = new Set();
-  const seenDuplicates: Set<number> = new Set();
+// function findDuplicates(nums: number[]): number[] {
+//   const duplicates: number[] = [];
+//   const seen: Set<number> = new Set();
+//   const seenDuplicates: Set<number> = new Set();
 
-  for (const num of nums) {
-    if (seen.has(num) && !seenDuplicates.has(num)) {
-      duplicates.push(num);
-      seenDuplicates.add(num);
+//   for (const num of nums) {
+//     if (seen.has(num) && !seenDuplicates.has(num)) {
+//       duplicates.push(num);
+//       seenDuplicates.add(num);
+//     }
+//     seen.add(num);
+//   }
+
+//   return duplicates;
+// }
+
+// console.log(findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]));
+
+// TASK ZR
+
+function countNumberAndLetters(input: string): {
+  number: number;
+  letter: number;
+} {
+  let numberCount = 0;
+  let letterCount = 0;
+
+  for (let char of input) {
+    if (char >= "0" && char <= "9") {
+      numberCount++;
+    } else if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+      letterCount++;
     }
-    seen.add(num);
   }
 
-  return duplicates;
+  return {
+    number: numberCount,
+    letter: letterCount,
+  };
 }
-
-console.log(findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]));
+const result = countNumberAndLetters("string152%¥");
+console.log(result);
