@@ -604,25 +604,42 @@ GraphQL API
 
 // TASK ZR
 
-function countNumberAndLetters(input: string): {
-  number: number;
-  letter: number;
-} {
-  let numberCount = 0;
-  let letterCount = 0;
+// function countNumberAndLetters(input: string): {
+//   number: number;
+//   letter: number;
+// } {
+//   let numberCount = 0;
+//   let letterCount = 0;
 
-  for (let char of input) {
-    if (char >= "0" && char <= "9") {
-      numberCount++;
-    } else if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
-      letterCount++;
+//   for (let char of input) {
+//     if (char >= "0" && char <= "9") {
+//       numberCount++;
+//     } else if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
+//       letterCount++;
+//     }
+//   }
+
+//   return {
+//     number: numberCount,
+//     letter: letterCount,
+//   };
+// }
+// const result = countNumberAndLetters("string152%¥");
+// console.log(result);
+
+// TASK ZS
+
+function singleNumber(arr: number[]) {
+  const result: number[] = [];
+  for (let i = 0; i <= arr.length; i++) {
+    for (let j = 1; j <= arr.length; j++) {
+      if (arr[i] !== arr[j]) {
+        return arr[i];
+      }
     }
   }
-
-  return {
-    number: numberCount,
-    letter: letterCount,
-  };
 }
-const result = countNumberAndLetters("string152%¥");
-console.log(result);
+
+const arr = [4, 1, 2, 1, 2];
+const answer = singleNumber(arr);
+console.log(answer);
