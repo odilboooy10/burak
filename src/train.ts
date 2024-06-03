@@ -629,17 +629,68 @@ GraphQL API
 
 // TASK ZS
 
-function singleNumber(arr: number[]) {
-  const result: number[] = [];
-  for (let i = 0; i <= arr.length; i++) {
-    for (let j = 1; j <= arr.length; j++) {
-      if (arr[i] !== arr[j]) {
-        return arr[i];
-      }
+// function singleNumber(arr: number[]) {
+//   const result: number[] = [];
+//   for (let i = 0; i <= arr.length; i++) {
+//     for (let j = 1; j <= arr.length; j++) {
+//       if (arr[i] !== arr[j]) {
+//         return arr[i];
+//       }
+//     }
+//   }
+// }
+
+// const arr = [4, 1, 2, 1, 2];
+// const answer = singleNumber(arr);
+// console.log(answer);
+
+// TASK ZT
+// function firstUniqueCharIndex(str: string) {
+//   const charCount: { [key: string]: number } = {};
+
+//   // counting the occurences of each character in the string
+//   for (let char of str) {
+//     if (charCount[char] !== undefined) {
+//       charCount[char]++;
+//     } else {
+//       charCount[char] = 1;
+//     }
+//   }
+//   // finding the index of the first unique character
+//   for (let i = 0; i < str.length; i++) {
+//     if (charCount[str[i]] === 1) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// const result = firstUniqueCharIndex("stamp");
+// console.log("result:", result);
+
+// TASK ZU
+
+function sumOfUnique(nums: number[]): number {
+  const frequency: { [key: number]: number } = {};
+
+  // counting the occurences of each element
+  for (const num of nums) {
+    if (frequency[num] !== undefined) {
+      frequency[num] += 1;
+    } else {
+      frequency[num] = 1;
     }
   }
+
+  // sum the elements that appear exactly once
+  let countUnique = 0;
+  for (const num in frequency) {
+    if (frequency[num] === 1) {
+      countUnique += parseInt(num);
+    }
+  }
+  return countUnique;
 }
 
-const arr = [4, 1, 2, 1, 2];
-const answer = singleNumber(arr);
-console.log(answer);
+const result = sumOfUnique([1, 2, 3, 2]);
+console.log("result:", result);
